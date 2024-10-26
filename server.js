@@ -29,7 +29,7 @@ app.post('/shorten', async (req, res) => {
   const url = new Url({ originalUrl });
   await url.save();
 
-  const shortUrl = `http://localhost:${PORT}/${url.shortUrl}`;
+  const shortUrl = `https://link-shortener-bch2.onrender.com/${url.shortUrl}`;
   
   res.json({ shortUrl });
 });
